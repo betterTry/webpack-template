@@ -8,6 +8,8 @@ new Vue(Vue.util.extend({
   router,
 }, App)).$mount('#app');
 {{else}}
+const mxy = {};
+
 !function (name, defination) {
   const hasDefine = typeof window.define == 'function';
   const hasExports = typeof module !== 'undefined' && module.exports;
@@ -18,5 +20,5 @@ new Vue(Vue.util.extend({
   } else {
     window.name = defination;
   }
-}('mxy', defination)
+}('mxy', mxy);
 {{/if}}
