@@ -1,4 +1,3 @@
-require('./check-versions')();
 var config = require('../config');
 if (!process.env.NODE_ENV) process.env.NODE_ENV = JSON.parse(config.dev.env.NODE_ENV);
 var path = require('path');
@@ -8,7 +7,7 @@ var webpack = require('webpack');
 
 var opn = require('opn');
 var proxyMiddleware = require('http-proxy-middleware');
-var webpackConfig = process.env.NODE_ENV === 'testing' ? require('./webpack.prod.conf') : require('./webpack.dev.conf');
+var webpackConfig = require('./webpack.dev.conf');
 var loacalConfigPath = path.resolve(__dirname, '../config/local-config.js');
 
 if (fs.existsSync(loacalConfigPath)) {
@@ -73,7 +72,7 @@ module.exports = app.listen(port, function (err) {
   }
 
   // utils.localIp();
-  var uri = (localConfig && localConfig.defaultRouter) ? localConfig.defaultRouter : 'http://localhost:' + port + '/#/portal/complaint/center';
+  var uri = (localConfig && localConfig.defaultRouter) ? localConfig.defaultRouter : 'http://localhost:' + port;
   /*eslint-disable*/
   console.log('Listening at ' + uri + '\n');
   /*eslint-enable*/

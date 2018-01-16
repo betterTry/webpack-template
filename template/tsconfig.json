@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "ES2015",
+    "moduleResolution": "node",
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types",
+      "src/typings"
+    ],
+    "types": [
+      "node"
+    ],
+    "lib": ["es5", "es2015.promise", "dom", "es2017", "es6"]
+  },
+  "exclude": [
+    "node_modules",
+    "typings"
+  ]
+}

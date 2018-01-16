@@ -1,7 +1,6 @@
 var path = require('path');
 var config = require('../config');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var env = require('../f2eci.json').env;
 
 exports.assetsPath = function (_path) {
   var assetsSubDirectory = process.env.NODE_ENV === 'production'
@@ -73,8 +72,3 @@ exports.localIp = function () {
   }
   return iptable.localIP;
 };
-
-exports.isBeta = function () {
-  return env === 'beta'
-
-}
