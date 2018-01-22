@@ -26,7 +26,7 @@ module.exports = {
     'camelcase': 1,
     'no-fallthrough': 0,
     'semi': ['error', 'always'],
-    'quotes': ['error', 'single', {"allowTemplateLiterals": true}],
+    'quotes': ['error', 'single', {"allowTemplateLiterals": true, "avoidEscape": true }],
     'no-extra-semi': ['error'],
     'indent': ['error', 2, {'SwitchCase': 1}],
     'linebreak-style': ['error', 'unix'],
